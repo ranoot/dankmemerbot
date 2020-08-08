@@ -1,7 +1,7 @@
 # dankmemerbot
 Bot to play the discord "Dank memer" bot game
 
-You can edit the commands used by the bot by editing the OPTIONS variable
+You can edit the commands used by the bot by editing the `OPTIONS` variable
 ```
 postmeme = lambda: "pls postmeme\n"+ choice(["n", "r", "e", "d"]) + "\n"
 
