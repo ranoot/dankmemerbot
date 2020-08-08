@@ -1,6 +1,8 @@
 # dankmemerbot
 Bot to play the discord "Dank memer" bot game
 
+Run the dank.py file, you have 5 seconds to put your text cursor on your discord message box.
+
 You can edit the commands used by the bot by editing the `OPTIONS` variable
 ```
 postmeme = lambda: "pls postmeme\n"+ choice(["n", "r", "e", "d"]) + "\n"
