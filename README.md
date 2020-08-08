@@ -14,7 +14,7 @@ OPTIONS = [
 The example above is the default options
 To include a new option, create a new dictionary with the keys `"command"` and `"reset_time"`.
 
-The value of `"command"` is a function that returns the string that you want to type, the simplest way to do so is using anoymous function expressions `lambda: <text>`, you can also write functions like `postmeme` that include logic.
+The value of `"command"` is a function that returns the string that you want to type, the simplest way to do so is using anoymous function expressions `lambda: <return value>`, you can also write functions like `postmeme` that include logic.
 
 The value of `"reset_time"` is an integer representing the time to wait before typing out the value specified in `"command"` again.
 
