@@ -22,7 +22,7 @@ class bot():
         self.reset_times = [i["reset_time"] for i in options] # List of reset times
         LCM_time = findLCM(self.reset_times) # Length of one loop (in seconds)
         self.pulse_time = findHCF(self.reset_times) # Length of each pulse
-        self.total_pulses = int(LCM_time / self.pulse_time) # Total no. of pulses
+        self.total_pulses = int(LCM_time / self.pulse_time) # Total no. of pulses in one loop
 
         self.pulse_count = 0 # Total no. of pulses ran
     
@@ -41,14 +41,14 @@ class bot():
         return self.pulse_count * (15 + 4*0.5)
 
     def run_cycle(self):
-        if self.pulses_ran == 0:
+        if self.pulse_count == 0:
             for i in range(len(self.options)):
                 self.keyboard.type(self.options[i]["command"]())
                 sleep(0.5)
 
         for i in range(self.total_pulses):
             if self.proceed:
-                self.pulses_ran += 1 # Increments the count of pulses ran
+                self.pulse_count += 1 # Increments the count of total pulses ran
                 sleep(self.pulse_time)
                 for x in self.order[i]:
                     self.keyboard.type(self.options[x]["command"]())
